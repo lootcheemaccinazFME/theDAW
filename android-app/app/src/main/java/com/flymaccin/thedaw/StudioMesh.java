@@ -24,7 +24,7 @@ public final class StudioMesh {
  }
  public static void send(Activity a,String targetPackage,String payload){
   Intent i=new Intent(ACTION);i.setType(MIME);i.setPackage(targetPackage);i.putExtra(Intent.EXTRA_TEXT,payload);
-  try{a.startActivity(i);}catch(Exception e){Toast.makeText(a,"Target app not installed",Toast.LENGTH_SHORT).show();}
+  try{a.startActivity(i);}catch(Exception e){android.widget.Toast.makeText(a,"Target app not installed",android.widget.Toast.LENGTH_SHORT).show();}
  }
  public static void share(Activity a,String payload){
   Intent i=new Intent(Intent.ACTION_SEND);i.setType(MIME);i.putExtra(Intent.EXTRA_TEXT,payload);a.startActivity(Intent.createChooser(i,"Send through FME Studio Mesh"));
